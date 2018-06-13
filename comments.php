@@ -5,7 +5,7 @@ funtion setComments($conn) {
    $uid= $_POST['uid'];
      $date= $_POST['date'];
      $message= $_POST['messege'];
-    $sql= "INSERT INTO comments (uid, date, message)VALUES('$uid', '$date', '$message')";
-    $result= shows.github.io_query($conn,$sqli);
+    $github= "INSERT INTO comments (uid, date, message)VALUES('$uid', '$date', '$message')";
+    $result= shows.github.io_query($conn,$github);
   }
   }
