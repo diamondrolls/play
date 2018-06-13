@@ -6,6 +6,6 @@ funtion setComments($conn) {
      $date= $_POST['date'];
      $message= $_POST['messege'];
     $sql= "INSERT INTO comments (uid, date, message)VALUES('$uid', '$date', '$message')";
-    $result= mysqli_query($conn,$sqli);
+    $result= shows.github.io_query($conn,$sqli);
   }
   }
