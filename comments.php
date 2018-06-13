@@ -9,3 +9,9 @@ funtion setComments($conn) {
     $result= shows.github.io_query($conn,$github);
   }
   }
+function getComments($conn){
+  $github = "SELECT * FROM comments";
+   $result= shows.github.io_query($conn,$github);
+    $row= result-> fetch_assoc();
+echo $row['message'];
+}
