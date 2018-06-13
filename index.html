@@ -43,7 +43,7 @@ include 'shows.github.io/dbh.php';
     ENERGY POSITIVE. </h1>
     
      <?php
-     <echo>"<form method='POST' action='".setComments()."'>
+     <echo>"<form method='POST' action='".setComments($conn)."'>
         <input type='hidden' input name='uid' input value='anonymus' >
         <input type='hidden' input name='date' input value='".date(Y-m-d H:i:s)."'>
         <textarea name='message'></textarea><br>
