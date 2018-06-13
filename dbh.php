@@ -1,3 +1,3 @@
 <?php
 
-$conn = github_connect('local host','root',)
+$conn = mysqli_connect('local host','root', 'shows.github.io')
