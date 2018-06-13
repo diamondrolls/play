@@ -12,6 +12,7 @@ funtion setComments($conn) {
 function getComments($conn){
   $github = "SELECT * FROM comments";
    $result= shows.github.io_query($conn,$github);
-    $row= result-> fetch_assoc();
-echo $row['message'];
+   while ( $row= result-> fetch_assoc()){
+echo $row['message']."<br><br>"; 
+}
 }
