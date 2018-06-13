@@ -1,3 +1,6 @@
+<?php
+imclude 'shows.github.io/comments.php';
+?>
 <!DOCTYPE html>
 <html>
   
@@ -38,14 +41,14 @@
     WE TAKE PRIDE IN OUT COMMUNITY AND WE WANT YOU TO TURN THAT NEGATIVE <br>
     ENERGY POSITIVE. </h1>
     
-     <?php>
+     <?php
      <echo>"<form method='POST' action='".setComments()."'>
         <input type='hidden' input name='uid' input value='anonymus' >
         <input type='hidden' input name='date' input value='".date(Y-m-d H:i:s)."'>
         <textarea name='message'></textarea><br>
-        <button type='submit' name='submit'>Comment</button>
+        <button type='commentSubmit' name='submit'>Comment</button>
               </form>";
-    <?>
+    ?>
     
     
     </body>
