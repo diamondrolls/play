@@ -1,10 +1,4 @@
-<?php
-require('Persistence.php');
-$comment_post_ID = 1;
-$db = new Persistence();
-$comments = $db->get_comments($comment_post_ID);
-$has_comments = (count($comments) > 0);
-?>
+
 <ol id="posts-list" class="hfeed<?php echo($has_comments?' has-comments':''); ?>">
   <li class="no-comments">Be the first to add a comment.</li>
   <?php
