@@ -109,11 +109,18 @@ padding-bottom:0px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-
+div.bordercontrol {
+border-style: solid;
+border-color:red;
+ overflow: scroll;
+height:550px;
+    width:350px;
+opacity:0.7;
+}
 slider {
   display: block;
-  width:600px;
-  height:400px;
+  width:500px;
+  height:300px;
     background-color:#1f1f1f;
   overflow:hidden;
   position: absolute;
@@ -121,8 +128,8 @@ slider {
 slider > * {
   position:absolute;
   display:block;
-  width:100%;
-  height:100%;
+  width:500px;
+  height:300px;
   background:#1f1f1f;
   animation: slide 12s infinite;
   overflow: hidden;
@@ -891,13 +898,14 @@ object:hover {
 </form>
 </li></ul>
 </li></ul><br>
-
-<slider>
+<br>
+<br>
+<div id="bordercontrol"><slider>
   <slide><img src='https://i.pinimg.com/564x/0d/aa/03/0daa03050378bf3c940e33bbf9dfb0cd.jpg'/></slide>
   <slide><img src='https://i.pinimg.com/564x/17/df/e9/17dfe99565b47832cc29c11a7883b47f.jpg'/></slide>
   <slide><img src='https://i.pinimg.com/564x/44/37/fc/4437fc3f07b99959813dd79b99c571cc.jpg'/></slide>
   <slide><img src='https://i.pinimg.com/564x/3b/0e/b5/3b0eb5d0e6a11ba71f44fb3dffa31068.jpg'/></slide>
-  </slider>
+  </slider></div>
 <script>
 	
 	var events = new Events();
