@@ -17,7 +17,7 @@
            <meta name="description" content="how to make money online">
            <meta name="keywords" content= "lilcomputernerd, college, charity, rapbeefs">
            <meta name="generator" content="Brackets">
-	  <script src="https://js.stripe.com/v3"></script>
+	  
            <style type= "text/css" >
             img           { 
                           display:block; margin-left: 
@@ -115,7 +115,29 @@ html{
    </style>
 	 </header>
    <head>
-	  
+	  <script src="https://js.stripe.com/v3"></script>
+	   
+	   <script>
+	
+	
+  var stripe = Stripe('pk_live_cmDOcEOGiegpbw6AkUpMmFZM0074v4tFAm');
+
+  var checkoutButton = document.getElementById('checkout-button-sku_FJtX1F2GmgliUP');
+  checkoutButton.addEventListener('click', function () {
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_FJtX1F2GmgliUP', quantity: 1}],
+      successUrl: window.location.protocol + '//diamondrolls.org/success',
+      cancelUrl: window.location.protocol + '//diamondrolls.org/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+         </script>
+	   
 	 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134202936-1"></script>
 <script>
@@ -303,37 +325,7 @@ html{
 	    <br>
 	    <br>
 	
-<script>
-	
-	
-  var stripe = Stripe('pk_live_cmDOcEOGiegpbw6AkUpMmFZM0074v4tFAm');
 
-  var checkoutButton = document.getElementById('checkout-button-sku_FJtX1F2GmgliUP');
-  checkoutButton.addEventListener('click', function () {
-    // When the customer clicks on the button, redirect
-    // them to Checkout.
-    stripe.redirectToCheckout({
-      items: [{sku: 'sku_FJtX1F2GmgliUP', quantity: 1}],
-
-      // Do not rely on the redirect to the successUrl for fulfilling
-      // purchases, customers may not always reach the success_url after
-      // a successful payment.
-      // Instead use one of the strategies described in
-      // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: window.location.protocol + '//diamondrolls.org/success',
-      cancelUrl: window.location.protocol + '//diamondrolls.org/canceled',
-    })
-    .then(function (result) {
-      if (result.error) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer.
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-
-         </script>
       
    </body>
          <footer >
