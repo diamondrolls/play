@@ -17,7 +17,7 @@
            <meta name="description" content="how to make money online">
            <meta name="keywords" content= "lilcomputernerd, college, charity, rapbeefs">
            <meta name="generator" content="Brackets">
-	  
+	  <script src="https://js.stripe.com/v3"></script>
            <style type= "text/css" >
             img           { 
                           display:block; margin-left: 
@@ -37,11 +37,12 @@
                           height:100px;
              }
 		   .clothed{
-		   height:550px;
-		   width:700px;
-		   background-image:url("https://i.pinimg.com/originals/a7/a5/96/a7a59632f36880d78e0940112f341a1f.jpg");
+		   height:700px;
+		   width:400px;
+		   background-image:url("https://i.pinimg.com/564x/a0/06/8e/a0068e1379334904a8447d1e3c3a1af3.jpg");
 		   background-size:cover;
-		   background-repeat:no-repeat;}
+		   background-repeat:no-repeat;
+		   border-style:outset;}
     ul {
        margin:0px;
        padding:0px;
@@ -134,27 +135,17 @@ html{
 	    <br>
 	    <br>
 	    <br>
-	  <div class="clothed"> 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="P4Y595PKJUB4G">
-<table>
-<tr><td><input type="hidden" name="on0" value="Options">Options</td></tr><tr><td><select name="os0">
-	<option value="new releases">new releases : $8.00 USD - monthly</option>
-	<option value="news letters">news letters : $360.00 USD - monthly</option>
-</select> </td></tr>
-</table>
-<input type="hidden" name="currency_code" value="USD">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribe_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
+	<center><div class="clothed"> 
+<button
+  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+  id="checkout-button-sku_FX9dMN3cwWpOj5"
+  role="link"
+>
+  Checkout
+</button>
 
+<div id="error-message"></div>
 
-
-
-		    <A HREF="https://www.paypal.com/cgi-bin/webscr?cmd=_subscr-find&alias=UAGYHTHA6PUVJ">
-<IMG SRC="https://www.paypalobjects.com/en_US/i/btn/btn_unsubscribe_SM.gif" BORDER="0">
-</A>
 	
  </div></center>
 	  <ul>
@@ -296,7 +287,34 @@ html{
 	    <br>
 
  
-	   
+	   <script>
+  var stripe = Stripe('pk_live_cmDOcEOGiegpbw6AkUpMmFZM0074v4tFAm');
+
+  var checkoutButton = document.getElementById('checkout-button-sku_FX9dMN3cwWpOj5');
+  checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_FX9dMN3cwWpOj5', quantity: 1}],
+
+      // Do not rely on the redirect to the successUrl for fulfilling
+      // purchases, customers may not always reach the success_url after
+      // a successful payment.
+      // Instead use one of the strategies described in
+      // https://stripe.com/docs/payments/checkout/fulfillment
+      successUrl: window.location.protocol + '//diamondrolls.org/success',
+      cancelUrl: window.location.protocol + '//diamondrolls.org/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+</script>
    </body>
          <footer >
                 <p>all U.S. deliveries take about 4 weekdays to be delivered #USA</p>    
