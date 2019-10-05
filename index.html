@@ -42,7 +42,46 @@
 		   background-image:url("https://i.pinimg.com/564x/a0/06/8e/a0068e1379334904a8447d1e3c3a1af3.jpg");
 		   background-size:cover;
 		   background-repeat:no-repeat;
-		   border-style:outset;}
+		   border-style:outset;
+		   }
+		   
+.neon
+{
+  position:absolute;
+  top:10%;
+  left:25%;
+	translate:transform (-50%,-50%);
+	margin:0;
+	padding:0 20px;
+	font-size:50px;
+	color:#34ccff;
+	text-shadow:0 0 20px;
+}
+
+
+.neon:after
+{
+	top:0;
+	left:0;
+	content:attr(data-text);
+	position:absolute;
+	padding:0 0 20px;
+	z-index:-1;
+	color:#34ccff;
+	filter:blur(15px);
+}
+
+.neon:before
+{
+	content:" ";
+	top:0;
+	left:0;
+	position:absolute;
+	background:#34ccff;
+	z-index:-3;
+	opacity:.5;
+	filter:blur(40px);
+}
     ul {
        margin:0px;
        padding:0px;
@@ -110,12 +149,12 @@ html{
     width:450px;
     height:600px;
     float:right;
-    overflow:scroll;
     border-style:outset;
 	position:absolute;
 	background-image:url('https://i.pinimg.com/originals/09/00/ee/0900ee030d96065449beaa7eade5ea0e.gif');
 	background-size:450px 600px;
 	background-repeat:no-repeat;
+	right:0px;
 }
 
   .crazy{
@@ -140,30 +179,30 @@ html{
 	
 	}
  
-		   .merch1{
+		   .merch{
 	
 	border-style:solid;
 	border-color:rgb(255,0,0);
 	height:150px;
-	width:430px;
+	width:100%;
 	background-color:rgb(0,0,0);
 		  }
-		   .crazy1{
+		   .fragrences{
 	
 	border-style:solid;
 	border-color:rgb(255,0,0);
 	height:150px;
-	width:430px;
+	width:100%;
 	background-color:rgb(0,0,0);
       
 		  }
 
-		   .premiums1{
+		   .wristwear{
 	
         border-style:outset;
 	border-color:rgb(0,255,0);
 	background-color:rgb(0,0,0);
-	width:430px;
+	width:100%;
 	height:150px;
 	}
 		   
@@ -190,6 +229,7 @@ html{
 	    <br>
 	    
  	 <div id="left-sidebar">
+		  <div class="merch"><h1></h1></div>
 		  <ul>
 		    <li><img src="https://i.pinimg.com/originals/cb/4e/28/cb4e288c8697ec9f9318203b14f98b52.jpg" height="300px" width="300px"></li>
 			    <li><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -310,6 +350,7 @@ html{
 		   </div>
 	
 	    <div id="left-sidebar">
+		     <div class="fragrences"><h1></h1></div>
 	  <ul>
 		      <li><img src="https://i.pinimg.com/564x/1e/be/3e/1ebe3eff9e2296b02883e986603c3f6e.jpg" height="300px" width="430px"></li>
 			    <li><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -379,6 +420,7 @@ html{
 	    <br>
 	    <br>
 	     <div id="left-sidebar">
+		      <div class="wristwear"><h1></h1></div>
 	    <ul>
 		  <li><img src="https://i.pinimg.com/originals/4f/c7/de/4fc7de433dbd461b74047991c0063002.jpg" height="300px" width="430px"></li>
 			    <li>  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
