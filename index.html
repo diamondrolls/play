@@ -212,7 +212,6 @@ right:5px;
 		   }
 		   
   .pushy{
-	  z-index:99;
 	position:relative;
           width:300px;
  	  height:120px;
@@ -221,17 +220,16 @@ right:5px;
 		   }
 		   
 		   @keyframes pushy1{
-		          0%{left:-50%;}
-			   100%{left:45%;}
+		         from{left:-50%;}
+			   to{left:45%;}
 		   }
 		   
 		   @-webkit-keyframes pushy1{
-                           0%{left:-50%;}
-			   100%{left:45%;}
+                           from{left:-50%;}
+			   to{left:45%;}
 		   }
 		   
 		   .bully{
-	  z-index:99;
 	  position:relative;
           width:300px;
 	  height:120px;
@@ -240,13 +238,13 @@ right:5px;
 		   }
 		   
 		   @keyframes bully1{
-		          0%{right:-50%;}
-			   100%{right:45%;}
+		          from{right:-50%;}
+			   to{right:45%;}
 		   }
 		   
 		   @-webkit-keyframes bully1{
-                           0%{right:-50%;}
-			   100%{right:45%;}
+                           from{right:-50%;}
+			   to{right:45%;}
 		   }
 		
 		   #right-sidebar{
