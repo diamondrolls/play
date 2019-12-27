@@ -242,21 +242,40 @@ right:5px;
 	  position:absolute;
           width:300px;
 	  height:120px;
-	  animation:pushy 3s infinite;
-	  -webkit-animation:pushy 3s infinite;
+	  animation:pushy1 3s infinite;
+	  -webkit-animation:pushy1 3s infinite;
 		   }
 		   
-		   @keyframes pushy{
+		   @keyframes pushy1{
 		          0%{left:2%;}
 			   100%{left:75%;}
 		   }
 		   
-		   @-webkit-keyframes pushy{
+		   @-webkit-keyframes pushy1{
                            0%{left:2%;}
 			   100%{left:75%;}
 		   }
 		   
-		#right-sidebar{
+		   .bully{
+	  z-index:9999;
+	  position:absolute;
+          width:300px;
+	  height:120px;
+	  animation:bully1 3s infinite;
+	  -webkit-animation:bully1 3s infinite;
+		   }
+		   
+		   @keyframes bully1{
+		          0%{left:2%;}
+			   100%{left:75%;}
+		   }
+		   
+		   @-webkit-keyframes bully1{
+                           0%{left:2%;}
+			   100%{left:75%;}
+		   }
+		
+		   #right-sidebar{
 	border-radius:40px;
     width:435px;
     height:250px;
@@ -373,7 +392,8 @@ right:5px;
 	  <br>
 	  <div class="trials1"><div class"pushy"><h7 class="neon" data-text="Feel Amazing">Feel Amazing</h7></div></div>
 	    <br>
-	    <br>
+	   <div class="trials1"><div class"pushy"><h7 class="neon" data-text="For Cheaper">For Cheaper</h7></div></div>
+	  
 	    <br>
 	    <br>
 	    <br>
