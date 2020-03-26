@@ -97,6 +97,47 @@ ul li ul li {
 ul li:hover ul li {
     display: block;
 }
+
+
+.dronecapsule{
+height:200px;
+    width:200px;
+animation:droneflying 3s linear infinite;
+-webkit-animation:droneflying 3s linear infinite;
+z-index:-5;
+}
+
+@-webkit-keyframes droneflying{
+0% (right:0%;)
+100%(right:100%;)
+}
+
+@keyframes droneflying{
+0% (right:0%;)
+100%(right:100%;)
+}
+
+
+.drone{
+height:100px;
+    width:180px;
+    background-image:url("https://i.pinimg.com/originals/52/a2/de/52a2de60594aeb4fc8afca8dc63a96df.png");
+	background-size:180px 100px;
+	background-repeat:no-repeat;
+z-index:-3;
+}
+
+.dronepackage{
+z-index:-4;
+height:100%;
+    width:100%;
+    background-image:url("https://i.pinimg.com/originals/9f/b2/38/9fb2389a4040d1f8a8ce66119db4a8e4.png");
+	background-size:100px 100px;
+	background-repeat:no-repeat;
+	position:absolute;
+}
+
+
 		   
 html{
 	height:100%;
@@ -298,6 +339,7 @@ position:absolute;
   </head>
     
     <body>
+
 	  <a href='https://diamondrolls.github.io/merch/'>
 		<div class="premiums"><h7 class="neon" data-text="Clothing">Clothing</h7></div></a>
 	
@@ -307,12 +349,20 @@ position:absolute;
 		<h7 class="neon" data-text="tech">tech</h7>
 		   </div></a>
 		
+
+<div class="dronecapsule">
+<div class="drone">
+<div class="dronepackage">
+</div></div></div>
 	    <a href='https://diamondrolls.github.io/bulkorders/'>
 		    <div class="premiums">
 		<h7 class="neon" data-text="Bulk">Bulk</h7>
 		   </div></a>
+
+
 		<div class="trials1">
 			 <center>
+
   <section class="slide">
     <place>
        <img src="https://i.pinimg.com/originals/80/f7/a9/80f7a9b58ce1d373d6534184f821ae24.jpg" width="400px"height="555px">
