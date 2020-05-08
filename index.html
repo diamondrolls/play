@@ -253,10 +253,18 @@ width:100%;
 		 width:200px;
 		height:250px;
 	        position:absolute;
+-webkit-animation:labtalk 2s infinite;
+animation:labtalk 2s infinite;
 		  }
-	
+	@-webkit-keyframes labtalk{
+       0%{transform: rotateY(0deg);}
+       100%{transform: rotateY(180deg);}
+}
 
-
+@keyframes labtalk{
+0%{transform: rotateY(0deg);}
+       100%{transform: rotateY(180deg);}
+}
      .witlove{
 	width:2000px; 
 	height:405px;
