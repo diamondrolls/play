@@ -251,11 +251,8 @@ animation:labtalk 6s infinite;
 }
 
 
-.overhead{
+.citycontainer{
 top:50px;	
-  background-image:url("https://i.pinimg.com/originals/c6/fa/25/c6fa253ccee7d96cb9fe9d1a3e7c31cf.jpg");
-background-size:100% 550px;	  
-	background-repeat:no-repeat;		  
 position:relative;
 opacity:1;
 width:100%;
@@ -263,6 +260,28 @@ height:550px;
  z-index:5;
 overflow:scroll;
 		  }
+
+.city{	
+  background-image:url("https://i.pinimg.com/originals/c6/fa/25/c6fa253ccee7d96cb9fe9d1a3e7c31cf.jpg");
+background-size:200% 1050px;	  
+	background-repeat:no-repeat;		  
+position:relative;
+opacity:1;
+width:200%;
+height:1050px;
+ z-index:5;
+	animation:movingcity 60s infinite alternate;
+-webkit-animation:movingcity 60s infinite alternate;
+}
+-@webkit-keyframes movingcity{
+0% {left:0px;}
+100% {left:220px;}
+}
+
+@keyframes movingcity{
+0% {left:0px;}
+100% {left:220px;}
+}
 
 .plane{
 top:150px;		  
@@ -273,8 +292,8 @@ background-image:url("https://i.pinimg.com/originals/63/06/72/6306726224bf4ccf3c
 width:100px;
 height:50px;
  z-index:6;
-animation:planeflying 22s infinite;
--webkit-animation:planeflying 22s infinite;
+animation:planeflying 22s infinite ;
+-webkit-animation:planeflying 22s infinite ;
 }
 
 -@webkit-keyframes planeflying{
@@ -536,9 +555,9 @@ background-image:url('https://i.pinimg.com/originals/08/30/41/083041c63140b301cb
   <body>
 
 	
-	<div class="overhead"><div class="plane">
+	<div class="overhead"><div class="city"><div class="plane">
 <h7 class="neon" data-text="Diamondrolls">Diamondrolls</h7>
-</div></div>
+</div></div></div>
 
 <center>
 <div class="lightscontainer">                                                                   
