@@ -261,7 +261,7 @@ overflow:scroll;
 
 .city{	
 overflow:hidden;
-position:relative;
+
   background-image:url("https://i.pinimg.com/originals/c6/fa/25/c6fa253ccee7d96cb9fe9d1a3e7c31cf.jpg");
 background-size:100% 100%;	  
 	background-repeat:no-repeat;	  
@@ -271,13 +271,13 @@ height:545px;
 -webkit-animation:movingcity 60s infinite alternate;
 }
 -@webkit-keyframes movingcity{
-0% {left:0px;}
-100% {left:-720px;}
+0% {left:0px;position:relative;}
+100% {left:-720px;position:relative;}
 }
 
 @keyframes movingcity{
-0% {left:0px;}
-100% {left:-720px;}
+0% {left:0px; position:relative;}
+100% {left:-720px; position:relative;}
 }
 
 .plane{
