@@ -613,27 +613,6 @@ background-image:url('https://i.pinimg.com/originals/08/30/41/083041c63140b301cb
 <div class="plane"></div>
 	<div class="plane2"></div>
                                                              
-	<div id="paypal-button-container"></div>
-<script src="https://www.paypal.com/sdk/js?client-id=AS5V8WsG0ZX5esmDk2ZW0lMTGPqStiCi9NH2jmmUg-gZ8uh_1G8EIRgBo1EUSzn0QORq3ZkxLobU_i0-&vault=true" data-sdk-integration-source="button-factory"></script>
-<script>
-  paypal.Buttons({
-      style: {
-          shape: 'rect',
-          color: 'gold',
-          layout: 'horizontal',
-          label: 'subscribe',
-          
-      },
-      createSubscription: function(data, actions) {
-        return actions.subscription.create({
-          'plan_id': 'P-5E0635775T467823HL4AQ2YQ'
-        });
-      },
-      onApprove: function(data, actions) {
-        alert(data.subscriptionID);
-      }
-  }).render('#paypal-button-container');
-</script>
 
 	  
 
