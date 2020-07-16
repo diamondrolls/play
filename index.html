@@ -526,7 +526,26 @@ background-image:url('https://i.pinimg.com/originals/08/30/41/083041c63140b301cb
 	
 }
 
-
+.slide{
+  width: 430px;
+  height: 550px;
+  overflow:hidden;
+  padding:0;
+  margin: 30px auto;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  -o-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+.slide place{
+  display:block;
+  width:0;
+  float:left;
+  -webkit-transition: all 0.75s;
+  -moz-transition: all 0.75s;
+  transition: all 0.75s;
+	z-index:1;
+}
 		</style>
 	</header>
  <head>
@@ -550,7 +569,6 @@ background-image:url('https://i.pinimg.com/originals/08/30/41/083041c63140b301cb
  	</div> 
  </head>
   <body>
-<iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:120px;height:40px;"src="https://www.clocklink.com/html5embed.php?clock=043&timezone=GMT1030&color=blue&size=120&Title=&Message=&Target=&From=2020,1,1,0,0,0&Color=blue"></iframe>
 
                                              
 	<div class="lamborghini">
@@ -593,7 +611,33 @@ background-image:url('https://i.pinimg.com/originals/08/30/41/083041c63140b301cb
 <div class="lightscontainer">
 <div class="plane"></div>
 	<div class="plane2"></div>
-                                             
+                                    
+<center>
+  <section class="slide">
+    <place> <h2>👽</h2>
+	    <img src="https://i.pinimg.com/originals/19/f6/30/19f630f2d80a8bd092dc9d02fbf94eb5.jpg" width="430px"height="550px">
+     
+    </place>
+    <place>
+       <img src="https://i.pinimg.com/originals/da/b4/50/dab450c9f3db97b4fff0861a20652a30.jpg" width="430px"height="550px">
+    
+    </place>
+    <place> 
+	    <img src="https://i.pinimg.com/originals/b6/b9/94/b6b994c72f61ce72cb873ce8b2b30122.jpg" width="430px"height="550px">
+	    
+    </place>
+    <place> 
+       <img src="https://i.pinimg.com/originals/01/05/27/010527622a3563e542fd9b3040311e7d.jpg" width="430px"height="550px">
+	   
+    </place>
+    <place>
+	   
+       <img src="https://i.pinimg.com/originals/bd/a1/10/bda110377a4c99efa45878cb07dd688c.png" width="430px"height="550px">
+    </place>
+</section>
+		
+</center>
+         
 </div>
  
 
@@ -606,7 +650,20 @@ background-image:url('https://i.pinimg.com/originals/08/30/41/083041c63140b301cb
         <button><a href="https://diamondrolls.github.io/legalrights/"> terms and conditions</a> </button>
   
 	
-
+<script>
+var x = 0;
+var y = 0;
+var myVar=setInterval(function(){slides()},3000);
+function slides() {
+  document.getElementsByTagName("place")[y].style.width="0px";
+  document.getElementsByTagName("place")[x].style.width="100%";
+  y = x;
+  ++x;
+  if (x == 5) {
+     x = 0;
+  }
+}
+</script>
     </body>
 <footer> </footer>
   </html>
