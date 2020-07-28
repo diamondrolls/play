@@ -221,13 +221,24 @@ background-color:rgb(0,0,0);
 	background-repeat:no-repeat;
 	border-radius:50%;
         background-size:250px 250px;
-	background-image:url("https://i.pinimg.com/originals/71/89/f7/7189f74fffb69f5b95738db3260e1e6a.gif");
+	background-image:url("https://i.pinimg.com/originals/cd/4e/1e/cd4e1e5fae977d9e57397bcf2be21463.png");
 		 width:250px;
 		height:250px;
  z-index:203;
- position:absolute;     
+ position:absolute;   
+  animation:pyramid 4s infinite ;
+-webkit-animation:pyramid 4s infinite ;
+}
 
-		  }
+-@webkit-keyframes pyramid{
+0% {transform:rotate Y(0deg);}
+100% {transform:rotate Y(360deg);}
+}
+
+@keyframes pyramid{
+0% {transform:rotate Y(0deg);}
+100% {transform:rotate Y(360deg);}
+}
 
 .plane{
 top:150px;		  
