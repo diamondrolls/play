@@ -221,17 +221,13 @@ background-color:rgb(0,0,0);
 
 -@webkit-keyframes pyramid{
 0% {transform:rotateX(0deg);}
-25%transform:rotateX(180deg);}
-30% {transform:rotateY(0deg);}
-50% {transform:rotateY(180deg);}
+
 100%transform:rotateX(180deg);}
 }
 
 @keyframes pyramid{
 0% {transform:rotateX(0deg);}
-25%transform:rotateX(180deg);}
-30% {transform:rotateY(0deg);}
-50% {transform:rotateY(180deg);}
+
 100%transform:rotateX(180deg);}
 }
 
@@ -298,7 +294,7 @@ overflow:hidden;
 border-radius:50%;
 left:-400px;
  z-index:6;
- position:absolute ;     
+ position:relative ;     
 -webkit-animation:lambtalk 1s infinite;
 animation:lambtalk 1s infinite;
 		  }
@@ -310,7 +306,7 @@ animation:lambtalk 1s infinite;
 border-radius:50%;
 left:-400px;
  z-index:6;
- position:absolute;     
+ position:relative;     
 -webkit-animation:lambtalk .6s infinite;
 animation:lambtalk .6s infinite;
 		  }
@@ -323,7 +319,7 @@ animation:lambtalk .6s infinite;
 border-radius:50%;
 left:-400px;
  z-index:6;
- position:absolute;     
+ position:relative;     
 -webkit-animation:lambtalk 2s infinite;
 animation:lambtalk 2s infinite;
 		  }
@@ -336,25 +332,25 @@ animation:lambtalk 2s infinite;
 border-radius:50%;
 left:-400px;
  z-index:6;
- position:absolute ;     
+ position:relative ;     
 -webkit-animation:lambtalk 1.5s infinite;
 animation:lambtalk 1.5s infinite;
 		  }
 
 	@-webkit-keyframes lambtalk{
-      0%{top:500px; left:-400px;}
-       33%{top:500px; left:500px;}
-50%{top:1000px; left:500px;}
-       66%{top:1000px; left:200px;}
-100%{top:2000px; left:200px;}
+      0%{top:10px; left:-400px;}
+       33%{top:10px; left:500px;}
+50%{top:500px; left:500px;}
+       66%{top:500px; left:200px;}
+100%{top:900px; left:200px;}
 }
 
 @keyframes lambtalk{
-0%{top:500px; left:-400px;}
-       33%{top:500px; left:500px;}
-50%{top:1000px; left:500px;}
-       66%{top:1000px; left:200px;}
-100%{top:2000px; left:200px;}
+ 0%{top:10px; left:-400px;}
+       33%{top:10px; left:500px;}
+50%{top:500px; left:500px;}
+       66%{top:500px; left:200px;}
+100%{top:900px; left:200px;}
 }
      .witlove{
 	width:2000px; 
