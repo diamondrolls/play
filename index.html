@@ -222,48 +222,26 @@ background-color:rgb(0,0,0);
 -@webkit-keyframes pyramid{
 0% {transform:rotateX(0deg);}
 
-100%transform:rotateX(180deg);}
+100%{transform:rotateX(180deg);}
 }
 
 @keyframes pyramid{
 0% {transform:rotateX(0deg);}
 
-100%transform:rotateX(180deg);}
+100%{transform:rotateX(180deg);}
 }
 
-.plane2{
-top:450px;		  
-position:absolute;
-background-size:500px 350px;	  
-	background-repeat:no-repeat;
-background-image:url("https://i.pinimg.com/originals/63/06/72/6306726224bf4ccf3c9e1400e0a7dc4c.png");
-width:500px;
-height:350px;
- z-index:3;
-animation:planeflying 7s  ;
--webkit-animation:planeflying 7s  ;
-left:30%;
-}
 
--@webkit-keyframes planeflying{
-0% {left:30%; top:-250px;}
-100% {left:30%; top:450px;}
-}
-
-@keyframes planeflying{
-0% {left:30%; top:-250px;}
-100% {left:30%; top:450px;}
-}
 
 .plane{
 left:30%;		  
-position:relative;
+position:absolute;
 background-size:500px 350px;	  
 	background-repeat:no-repeat;
 background-image:url("https://i.pinimg.com/originals/5a/d8/13/5ad813ab842ef0eccd20b21e8cfa3a1b.png");
 width:500px;
 height:270px;
- z-index:2;
+ z-index:72;
 animation:planefly 7s infinite ;
 -webkit-animation:planefly 7s infinite ;
 }
