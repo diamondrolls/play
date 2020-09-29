@@ -557,13 +557,10 @@ height:300px;
   <br><br>
    <br>
   <br><br> <br>
-  <form name="login">
-  <div class="login">
-    <input type="text"placeholder="Business" name="userid">
-    <br>
-    <input type="button"onclick="check(this.form)"value="Search"/>
-    </div>
-  </form>
+ <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+Name: <input type="text" name="fname">
+<input type="submit" value="Submit">
+</form>
    
 
 
@@ -579,70 +576,18 @@ height:300px;
   
 	
 <script>
-
-	
-		function check(form)
-{
-  if(form.userid.value=="store")
-  {
-    window.open('https://diamondrolls.github.io/merch/')
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "business") {
+        window.open('https://diamondrolls.github.io/stocks/')
+;
+    return false;
   }
-  else
-    {
-      alert("the username is not valid")
-    }
-}
-	</script>
-<script>
-	function check(form)
-{
-  if(form.userid.value=="diamondrolls")
-  {
-    window.open('https://diamondrolls.org')
+   if (x == "powerfulessence") {
+        window.open('https://diamondrolls.github.io/thecreator/')
+;
+    return false;
   }
-  else
-    {
-      alert("the username is not valid")
-    }
-}
-	</script>
-<script>
-	function check(form)
-{
-  if(form.userid.value=="noorauto")
-  {
-    window.open('https://diamondrolls.github.io/noorauto/')
-  }
-  else
-    {
-      alert("the username is not valid")
-    }
-}
-	</script>
-<script>
-		function check(form)
-{
-  if(form.userid.value=="powerfulessence")
-  {
-    window.open('https://diamondrolls.github.io/thecreator/')
-  }
-  else
-    {
-      alert("the username is not valid")
-    }
-}
-	</script>
-<script>
-	function check(form)
-{
-  if(form.userid.value=="business")
-  {
-    window.open('https://diamondrolls.github.io/stocks/')
-  }
-  else
-    {
-      alert("the username is not valid")
-    }
 }
 </script>
     </body>
