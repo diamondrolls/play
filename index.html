@@ -57,16 +57,28 @@ background-size:400px 900px;
   z-index:70;
   width:200px;
   height:100px;
- margin-left:3%;
-  animation:money 7s linear infinite ;
-  -webkit-animation: money 15s linear infinite ;/* Safari 4.0 - 8.0 */
+  left:10%;
+	top:25%;
+  animation:money2 7s linear infinite ;
+  -webkit-animation: money2 15s linear infinite ;/* Safari 4.0 - 8.0 */
    animation-direction: alternate;
   -webkit-animation-direction: alternate;/* Safari 4.0 - 8.0 */
-	background-image:url('https://i.pinimg.com/originals/91/3f/ad/913fad3e2ea431e2923b4972e1ce5a7e.png');
+	background-image:url('https://i.pinimg.com/564x/c4/2f/c2/c42fc20c8184e7ff1ca24eaacb4b7fd3.jpg');
 background-size:200px 100px;
 	background-repeat:no-repeat;
 }
-
+		  html{width:100%;
+                  height:100%;
+		  background-image:url('https://i.pinimg.com/originals/2f/23/04/2f230448d037d28e7e09700735ebd13e.jpg');
+               background-size:100% 100%;
+			  background-repeat:no-repeat;}
+		  
+		  
+		   body{width:100%;
+                  height:100%;
+		  overflow:scroll;
+			}
+ 
  .city{
 	transform-style:preserve-3d;
 	-webkit-transform-style:preserve-3d;
@@ -74,7 +86,8 @@ background-size:200px 100px;
   z-index:50;
   width:400px;
   height:400px;
- margin-left:24%;
+   left:24%;
+	 top:40%;
   animation:money 15s linear infinite ;
   -webkit-animation: money 25s linear infinite ;/* Safari 4.0 - 8.0 */
    animation-direction: alternate;
@@ -84,7 +97,18 @@ background-size:400px 400px;
 	background-repeat:no-repeat;
 }
 
-
+ .eth{
+	transform-style:preserve-3d;
+	-webkit-transform-style:preserve-3d;
+ position:absolute;
+  z-index:300;
+  width:400px;
+  height:400px;
+ 
+background-image:url('https://i.pinimg.com/originals/2a/7d/5c/2a7d5c39d8f7e4734276bdca141b1aec.gif');
+background-size:400px 400px;
+	background-repeat:no-repeat;
+}
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes money{
  25% {
@@ -125,10 +149,33 @@ background-size:400px 400px;
    transform:opacity(100%);
   }
 }
+		  /* Safari 4.0 - 8.0 */
+@-webkit-keyframes money2{
+ 25% {
+    
+   @-webkit-transform:rotateX(0deg);
+  
+  }
+  100%{
+  @-webkit-transform:rotateX(100deg);
+  }
+}
+@keyframes money2{
+  25% {
+     transform:rotateX(0deg);
+  }
+    100%{
+   transform:rotateX(100deg);
+  }
+}
 </style>
 <head>
 </head><body>
 <center><div class="playbox">
+	<div class="eth">
+	</div>
+	<div class="money">
+	</div>
 	<div class="city">
 	</div>
 	<center><div class="bodypicture">
