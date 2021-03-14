@@ -76,8 +76,8 @@ background-size:200px 100px;
 	 opacity:.5;
    left:24%;
 	 top:40%;
-  animation:money 7s linear infinite ;
-  -webkit-animation: money 7s linear infinite ;/* Safari 4.0 - 8.0 */
+  animation:monies 7s linear infinite ;
+  -webkit-animation: monies 7s linear infinite ;/* Safari 4.0 - 8.0 */
    animation-direction: alternate;
   -webkit-animation-direction: alternate;/* Safari 4.0 - 8.0 */
 	background-image:url('https://i.pinimg.com/originals/e0/68/ba/e068bad7891fc64effb90e2be1292de0.png');
@@ -99,23 +99,24 @@ background-size:400px 400px;
 	background-repeat:no-repeat;
 }
 /* Safari 4.0 - 8.0 */
-@-webkit-keyframes money{
+@-webkit-keyframes monies{
  25% {
     
-   @-webkit-transform:left(25px);
+   left:25px;
   
   }
    100%{
-  @-webkit-transform:left(200px);
+   left:200px;
   }
 }
-@keyframes money{
-  25% {
-     transform:left(25px);
+@keyframes monies{
+   25% {
+    
+   left:25px;
   
   }
-    100%{
-   transform:left(200px);
+   100%{
+   left:200px;
   }
 }
 /* Safari 4.0 - 8.0 */
