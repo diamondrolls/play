@@ -20,16 +20,13 @@ h1{
 font-color:rgba(0,355,355);
 font-size:24px;
 }
-.playbox{
-	transform-style:preserve-3d;
-	-webkit-transform-style:preserve-3d;
- position:relevant;
-  width:800px;
-  height:1000px; 
-   animation-direction: alternate;
-  -webkit-animation-direction: alternate;/* Safari 4.0 - 8.0 */
+.body{
+	width:100%;
+                  height:100%;
+		  overflow:hidden;
+ position:relevant; 
 	background-image:url('https://i.pinimg.com/originals/ec/6c/bf/ec6cbf68bac8d3dcf39b3f743e7ccc1b.gif');
-background-size:800px 1000px;
+background-size:100% 100%;
 	background-repeat:no-repeat;
 }
 
@@ -38,13 +35,13 @@ background-size:800px 1000px;
 	-webkit-transform-style:preserve-3d;
  position:absolute;
   z-index:10;
-  width:400px;
-  height:900px;
+  width:600px;
+  height:1200px;
 top:90px;
-  animation:money1 1s linear infinite ;
-  -webkit-animation: money1 1s linear infinite ;/* Safari 4.0 - 8.0 */
+  animation:money1 1s infinite alternate ;
+  -webkit-animation: money1 1s infinite alternate ;/* Safari 4.0 - 8.0 */
 	background-image:url('https://i.pinimg.com/originals/9d/0d/f4/9d0df49559bc5cf0a9b2b96beecdf7f2.png');
-background-size:400px 900px;
+background-size:600px 1200px;
 	background-repeat:no-repeat;
 }
 
@@ -67,15 +64,13 @@ background-size:200px 100px;
 }
 		  html{width:100%;
                   height:100%;
+			  overflow:hidden;
 		  background-image:url('https://i.pinimg.com/originals/2f/23/04/2f230448d037d28e7e09700735ebd13e.jpg');
                background-size:100% 100%;
 			  background-repeat:no-repeat;}
 		  
 		  
-		   body{width:100%;
-                  height:100%;
-		  overflow:scroll;
-			}
+		 
  
  .city{
 	transform-style:preserve-3d;
@@ -171,7 +166,8 @@ from {
 <head>
 </head><body><div class="eth">
 	</div>
-<center><div class="playbox">
+<center><div class="playbox">	</div> </center>
+
 	<center><div class="bodypicture"></center>
 	</div> 
 	<div class="money">
