@@ -43,8 +43,6 @@ background-size:800px 1000px;
 top:90px;
   animation:money1 1s linear infinite ;
   -webkit-animation: money1 1s linear infinite ;/* Safari 4.0 - 8.0 */
-   animation-direction: alternate;
-  -webkit-animation-direction: alternate;/* Safari 4.0 - 8.0 */
 	background-image:url('https://i.pinimg.com/originals/9d/0d/f4/9d0df49559bc5cf0a9b2b96beecdf7f2.png');
 background-size:400px 900px;
 	background-repeat:no-repeat;
@@ -63,7 +61,7 @@ background-size:400px 900px;
   -webkit-animation: money2 15s linear infinite ;/* Safari 4.0 - 8.0 */
    animation-direction: alternate;
   -webkit-animation-direction: alternate;/* Safari 4.0 - 8.0 */
-	background-image:url('https://i.pinimg.com/564x/c4/2f/c2/c42fc20c8184e7ff1ca24eaacb4b7fd3.jpg');
+	background-image:url('https://i.pinimg.com/originals/11/fa/00/11fa00eccd298c0314c4ea8864e58d71.png');
 background-size:200px 100px;
 	background-repeat:no-repeat;
 }
@@ -86,6 +84,7 @@ background-size:200px 100px;
   z-index:50;
   width:400px;
   height:400px;
+	 opacity:.5;
    left:24%;
 	 top:40%;
   animation:money 15s linear infinite ;
@@ -133,20 +132,20 @@ background-size:400px 400px;
 @-webkit-keyframes money1{
 from {
     
-   @-webkit-transform:opacity(0%);
+   @-webkit-transform:opacity(0);
   
   }
   to{
-  @-webkit-transform:opacity(100%);
+  @-webkit-transform:opacity(1);
   }
 }
 @keyframes money1{
   from {
-     transform:opacity(0%);
+     transform:opacity(0);
   
   }
     to{
-   transform:opacity(100%);
+   transform:opacity(1);
   }
 }
 		  /* Safari 4.0 - 8.0 */
@@ -174,12 +173,13 @@ from {
 <center><div class="playbox">
 	<div class="eth">
 	</div>
+	<div class="bodypicture">
+	</div> 
 	<div class="money">
 	</div>
 	<div class="city">
 	</div>
-	<center><div class="bodypicture">
-	</div> </center>
+	
 	
 	</div> </center>
 <script>
