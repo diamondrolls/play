@@ -16,164 +16,402 @@
    
 	</header>
           <style type= "text/css">
-h1{
-font-color:rgba(0,355,355);
-font-size:24px;
-}
-body{
-	height:1000px;
-                  width:100%;
-		  overflow:hidden; 
-	background-image:url('https://i.pinimg.com/originals/b2/b1/f1/b2b1f1c5d4718f1f9ca49eb23c056f7b.gif');
-background-size: 100% 1000px;
-	background-repeat:no-repeat;
-}
-
-
-.bodypicture{
- position:absolute;
-  z-index:10;
-  width:500px;
-  height: 550px;
-top:10%;
-	left:10%;
-  animation:money2 7s infinite alternate ;
-  -webkit-animation: money2 7s infinite alternate ;/* Safari 4.0 - 8.0 */
-	background-image:url('https://i.pinimg.com/originals/91/f6/76/91f6763abf1003b2e49dd960d59e1233.png');
-background-size: 500px 550px;
-	background-repeat:no-repeat;
-}
-
-.money{
-	transform-style:preserve-3d;
-	-webkit-transform-style:preserve-3d;
- position:absolute;
-  z-index:70;
-  width:200px;
-  height:100px;
-	top:15%;
-  left:75%;
-  animation:money1 3s linear infinite ;
-  -webkit-animation: money1 3s linear infinite ;/* Safari 4.0 - 8.0 */
-	background-image:url('https://i.pinimg.com/originals/75/18/67/751867dbff92feea484ffa77e0b61f16.png');
-background-size:200px 100px;
-	background-repeat:no-repeat;
-}
-		  html{width:100%;
-                  height:100%;
-			  overflow:hidden;
-			  background-color:rgb(0,0,0);
-		  }		  
+		         p          {
+                               font-size: 24px;
+                               color:#E9DEFF ;
+		   }
+                   
+                    h1        {
+                                font-family: ar berkley;
+                              }
+                    
+   
 		  
-		 
- 
- .city{
-	transform-style:preserve-3d;
-	-webkit-transform-style:preserve-3d;
- position:absolute;
-  z-index:50;
-  width:400px;
-  height:400px;
-	 opacity:.5;
-   left:24%;
-	 top:25%;
-  animation:monies 7s linear infinite ;
-  -webkit-animation: monies 7s linear infinite ;/* Safari 4.0 - 8.0 */
-   animation-direction: alternate;
-  -webkit-animation-direction: alternate;/* Safari 4.0 - 8.0 */
-	background-image:url('https://i.pinimg.com/originals/86/40/fb/8640fb58951539dac8a4fba76629c7ff.png');
-background-size:400px 400px;
-	background-repeat:no-repeat;
+.planeholder{
+        width:99.9%;
+	height:700px;
+	position:relative;
+	overflow:hidden;
+	z-index:3;
 }
 
- .eth{
-	transform-style:preserve-3d;
-	-webkit-transform-style:preserve-3d;
-	 left:10%;
- position:absolute;
-  z-index:1;
-  width:400px;
-  height:400px;
- border-radius:40%;
-background-image:url('https://i.pinimg.com/originals/ec/f5/b6/ecf5b6b4a3421b73f8049b2a759cfaee.gif');
-background-size:400px 400px;
+
+	   .registration{
+	border-color:rgb(0, 255, 255);
+	background-color:rgb(255, 209, 94);
+        z-index:99;
+	position:absolute;
+	border-radius:50px;
+        height:700px;
+	width:700px;
+	border-style:outset;
+		   top:25%;
+}
+		   
+		   .registrationbutton{
+background-color:rgba(0, 0, 0);
+	background-size:300px 150px;      
+	  z-index:99;
+	position:relative;
+	border-radius:50px;
+        height:150px;
+	width:300px;
+	border-style:outset;
+}
+
+.headerimage{
+background-image:url("https://i.pinimg.com/originals/b6/e0/e4/b6e0e4a3820008d80cb023effd466e40.jpg");
+background-size:900px 600px;
+border-style:outset;
+border-color:rgb(0,255,0);
+border-radius:40px;
+position:absolute;
+height:600px;
+width:900px;
+z-index:79;
+top:45%;
+}
+.plane2{
+	
+	position:relative;
+	background-image:url('https://i.pinimg.com/originals/6d/55/cb/6d55cbbcf1e7a742f61d9278fb710456.png');
+	background-size:175px 75px;
+        height:75px;
+	width:175px;
+	top:200px;
+	animation:lit 3s infinite ;
+        -webkit-animation: lit 3s infinite;/* Safari 4.0 - 8.0 */
+}
+
+
+
+
+.plane3{
+	
+	position:relative;
+	background-image:url('https://i.pinimg.com/originals/f2/a8/6f/f2a86fe6bae81f276b220c76fff072ec.png');
+	background-size:215px 105px;
+        height:105px;
+	width:215px;
+	top:450px;
+	animation:money 2s infinite ;
+        -webkit-animation: money 2s infinite;/* Safari 4.0 - 8.0 */
+}
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes lit{
+ 0% { left:-1200px;}
+	100% { left:2500px;}
+  
+}
+@keyframes  lit{
+0% { left:-1200px;}
+	100% { left:2500px;}
+
+}
+
+
+.plane4{
+	position:relative;
+	background-image:url('https://i.pinimg.com/originals/70/a2/07/70a207ca8950f441ed0c2261a7829808.png');
+	background-size:315px 205px;
+        height:205px;
+	width:315px;
+	top:500px;
+	animation:lit 2.5s infinite ;
+        -webkit-animation: lit 2.5s infinite;/* Safari 4.0 - 8.0 */
+}
+
+
+
+.plane5{
+	position:relative;
+	background-image:url('https://i.pinimg.com/originals/da/dc/6c/dadc6c53be020be67fe094bed3f9223d.png');
+	background-size:515px 405px;
+        height:405px;
+	width:515px;
+	top:700px;
+	animation:money 3s infinite ;
+        -webkit-animation: money 3s infinite;/* Safari 4.0 - 8.0 */
+}
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes money{
+  0% { right:-1200px;}
+	100% { right:2500px;}
+  
+}
+@keyframes  money{
+  0% { right:-1200px;}
+	100% { right:2500px;}
+
+}
+
+	   .thorshammer{		  
+z-index:999;
+		  position:absolute;	
+width:75px;
+   height:75px;
+background-color:rgb(222,137,240);
+right:6%;
+background-image:url('https://i.pinimg.com/originals/32/e3/b5/32e3b500464be6825895808149cc1ae6.png');
+	background-size:75px 75px;
 	background-repeat:no-repeat;
+	border-radius:50%;
+	border-color:rgb(0,255,255);
+	border-style:outset;
+		   } 
+	  
+.border6{
+	overflow:scroll;
+	width:580px; 
+	height:680px;
+        z-index:-5;
+        background-color:rgba(0,255,100,.6);
+	border-radius:40px;
+	border-style:inset;
+	padding-top:50px;
+} 
+
+html {  background-image:url('https://i.pinimg.com/originals/d1/33/48/d13348d7a8b42622829ade83a8adfb19.jpg');
+	height:100%;
+		width:100%;
+	overflow:scroll;
 }
+
+#left-sidebar{
+  float:left;
+  width:430px;
+	padding-top:5px;
+	
+}
+#right-sidebar{
+  float:right;
+  width:401px;
+	
+}
+
+.membershiparea{
+width:360px;
+	height:600px;
+}
+
+.ikeannaoptions{
+	position:absolute;
+	border-radius:50px;
+        height:100px;
+	width:300px;
+	background-color:rgb(0,0,0);
+	border-style:outset;
+	border-color:rgba(0, 355, 355);
+        z-index:99;
+	float:right;
+	
+}
+
+.stocks2{
+	border-color:rgb(255, 255, 255);
+	background-color:rgba(0, 0, 0, .5);
+	z-index:99;
+	position:absolute;
+	border-radius:50px;
+        background-image:url('https://i.pinimg.com/564x/3a/b1/f5/3ab1f588bd99dd729fa921b5b6fdb6cc.jpg');
+	background-size:200px 200px;
+	border-radius:50%;
+        height:200px;
+	float:left;
+	width:200px;
+	border-style:outset;
+	animation:cmoney 10s;
+        -webkit-animation: cmoney 10s;/* Safari 4.0 - 8.0 */
+}
+
+
+
+
 /* Safari 4.0 - 8.0 */
-@-webkit-keyframes monies{
- 25% {
-    
-   left:25px;
+@-webkit-keyframes cmoney{
+  0% { transform:rotateY(0deg);}
+	100% { transform:rotateY(360deg);}
   
-  }
-   100%{
-   left:200px;
-  }
 }
-@keyframes monies{
-   25% {
-    
-   left:25px;
-  
-  }
-   100%{
-   left:200px;
-  }
+@keyframes  cmoney{
+0% { transform:rotateY(0deg);}
+	100% { transform:rotateY(360deg);}
+
 }
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes money1{
-from {
-    
-   opacity:.5;
-  
-  }
-  to{
-  opacity:1;
-  }
+
+
+h3{
+  color:rgb(255,0,0);
+  font-size:50px;
+	background-color:rgb(225, 225, 225);
 }
-@keyframes money1{
-  from {
-     opacity:.5;
-  
-  }
-    to{
-opacity:1;
-	}
+
+h2{
+	font-size:20px;
+	text-align:left;
+	color:#white;
 }
-		  /* Safari 4.0 - 8.0 */
-@-webkit-keyframes money2{
- 25% {
-    
-   @-webkit-transform:rotateY(0deg);
-  
-  }
-  100%{
-  @-webkit-transform:rotateY(360deg);
-  }
+h8{
+	font-size:20px;
+	text-align:left;
+	color:#blue;
 }
-@keyframes money2{
-  25% {
-     transform:rotateY(0deg);
-  }
-    100%{
-   transform:rotateY(360deg);
-  }
+h9{
+	font-size:20px;
+	text-align:left;
+	color:#red;
+}
+
+
+.neon
+{
+  position:absolute;
+  top:10%;
+  left:25%;
+	translate:transform (-50%,-50%);
+	margin:0;
+	padding:0 20px;
+	font-size:45px;
+	color:#34ccff;
+	text-shadow:0 0 20px;
+}
+.neon:after
+{
+	top:0;
+	left:0;
+	content:attr(data-text);
+	position:absolute;
+	padding:0 0 20px;
+	z-index:-1;
+	color:#34ccff;
+	filter:blur(15px);
+}
+.neon:before
+{
+	content:" ";
+	top:0;
+	left:0;
+	position:absolute;
+	background:#34ccff;
+	z-index:-3;
+	opacity:.5;
+	filter:blur(40px);
+}
+h7{
+background-color:rgb(0,0,0);
+}
+
+.withlove{
+	width:100%;
+	height:650px;
+  position:relative;
+}
+
+
+		  
+		   ul {
+	   top:15%;
+         float:left;
+       list-style: none;
+        position:absolute;
+	z-index:30;
+    }
+
+ul li {
+position:relative;
+    font-size:20px;
+    font-family: ariel;
+    text-align:center;
+    }
+
+
+.lied{
+      text-decoration: none;
+    color: red;
+    display: block;
+   width:400px;
+  height:150px;
+  overflow:scroll;
+	font-size:30px;
+
+}
+
+.lied:hover {
+    float:none;
+    background-color:aqua; 
+    }
+
+ul li ul li {
+    display: none;
+position:relative;
+}
+ul li:hover ul li {
+z-index:999;
+width:99%;
+height:99%;
+    display: block;
+Position:relative;
+}
+
+body{
+	background-image:url('https://i.pinimg.com/564x/77/19/9a/77199af306812bf5f8c00bf62b7491b0.jpg');
+	background-size:100% 2000px;
+        overflow:hidden;   
+	 width:98%;
+	 height:2000px;
+	 		
+
+           }
+.love2{ 
+position:relative;
+z-index:2;
+	  border-radius:40px;
+	          overflow:scroll;   
+	border-style:inset;
+  height:900px;
+  width:800px;
+background-color:rgb(0,255,255);
+border-color:rgb(0,255,255);
 }
 </style>
-<head>
-</head><body><div class="eth">
-	</div>
+  <head>
+	    <h7 class="neon" data-text="CYPTO CITY">CRYPTO CITY</h7>  </head>
+         
+<body>
+  
 
 
-	<center><div class="bodypicture"></center>
-	</div> 
-	<div class="money">
-	</div>
-	<div class="city">
-	</div>
+	<div class='planeholder'><div class='plane2'></div><div class='plane3'></div><div class='plane4'></div><div class='plane5'></div></div>
 	
-<script>
-</script>
-    </body>
-<footer> </footer>
-  </html>
+ <div class="registration">
+	     <h1>Free Bitcoin</h1>
+	 <h1> Gain Access To Learn How To Build & Scale Your Business Instantly!</h1>
+	   <br> <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P4Y595PKJUB4G">  <div class="registrationbutton"><h7 class="neon" data-text="Sign Up">Sign Up</h7></div></a>
+	</div>
+
+	
+		 
+
+                   
+
+
+
+
+<br>
+<br>
+	<br>
+	
+	
+
+  	<script>
+
+		</script>
+          </body>
+<footer> 
+         </footer>
+              </html>
+
