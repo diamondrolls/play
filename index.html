@@ -101,53 +101,6 @@ background-color:rgb(0, 0, 0);
 	border-style:outset;
 }
 
-.headerimage{
-background-image:url("https://i.pinimg.com/originals/b6/e0/e4/b6e0e4a3820008d80cb023effd466e40.jpg");
-background-size:900px 600px;
-border-style:outset;
-border-color:rgb(0,255,0);
-border-radius:40px;
-position:absolute;
-height:600px;
-width:900px;
-z-index:79;
-top:45%;
-}
-
-.phonepic{
-        position:absolute;
-        height:150px;
-	width:80px;
-	}
-
-
-
-
-.plane23{
-position:absolute;
-        height:350px;
-	width:175px;
-	top:250px;
-        left:200px;
-	animation:money 4s infinite ;
-        -webkit-animation: money 4s infinite;/* Safari 4.0 - 8.0 */
-}
-
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes money{
- 0% { top:250px;}
-50% { top:300px;}
-100% { top: 250px;}
-  
-}
-		  
-@keyframes  money{
- 0% { top:250px;}
-50% { top :300px;}
-100% { top:250px;}
-
-}
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes litz{
@@ -225,29 +178,6 @@ width:360px;
 }
 
 
-
-
-
-
-
-
-
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes cmoney{
-  0% { top:300px;}
-     25% { top:400px;}
-	100% { top: 300px;}
-  
-}
-@keyframes  cmoney{
-0% { top:300px;}
-     25% { top:400px;}
-	100% { top: 300px;}
-  
-}
-
-
 h3{
   color:rgb(255,0,0);
   font-size:50px;
@@ -260,7 +190,7 @@ h2{
 	color:#white;
 }
 h8{
-	font-size:500px;
+	font-size:200px;
 }
 h9{
 	font-size:20px;
@@ -327,8 +257,31 @@ position:relevant;
         
 }
 	
+.imagebasics {
+        height: 635px;
+        width: 400px;
+        float: left;
+        border-style:solid;
+        border-radius:50px;
+        border-color:rgb(255, 255, 255);
+        margin-left:30px;
+        animation:money 3s infinite ;
+        -webkit-animation: money 3s infinite;/* Safari 4.0 - 8.0 */
 
-	  
+}
+	/* Safari 4.0 - 8.0 */
+@-webkit-keyframes money{
+ 0% { transform:rotate(0deg);}
+100% { transform:rotate(360deg);}
+
+  
+}
+		  
+@keyframes  money{
+ 0% { transform:rotate(0deg);}
+100% { transform:rotate(360deg);}
+
+}  
 		   ul {
 	   top:15%;
          float:left;
@@ -403,7 +356,7 @@ body{
 
 <div class='planeholder'> </div>
  
-<div class="carouselholder"><div class="imageholder"> 💎 </div> </div>
+<div class="carouselholder"><div class="imageholder"><div class="imagebasics"> <h8>💎</h8></div> </div> </div>
 
 
  <center><a href='https://diamondrolls.github.io/thepremiumway/'> <div class="registrationbutton"> <h7 class="neon" data-text=" Blockchain Business Sulutions "> Blockchain Business Solutions </h7>  </div></a></center>
