@@ -254,8 +254,23 @@ position:relevant;
         overflow:hidden;
       width:3000px;
       height:640px;
-        
+        left:0px;
+       animation:alotofmoney 15s infinite ;
+        -webkit-animation: alotofmoney 15s infinite;/* Safari 4.0 - 8.0 */
 }
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes money{
+ 0% { transform:rotateX(0deg);}
+100% { transform:rotateX(360deg);}
+
+  
+}
+		  
+@keyframes  money{
+ 0% { transform:rotateX(0deg);}
+100% { transform:rotateX(360deg);}
+
+}  
 	
 .imagebasics {
         height: 635px;
@@ -270,16 +285,18 @@ position:relevant;
 
 }
 	/* Safari 4.0 - 8.0 */
-@-webkit-keyframes money{
- 0% { transform:rotateX(0deg);}
-100% { transform:rotateX(360deg);}
+@-webkit-keyframes alotofmoney{
+ 0% { left:0px;}
+50% {left:-2500px;}
+100% { left:0px;}
 
   
 }
 		  
-@keyframes  money{
- 0% { transform:rotateX(0deg);}
-100% { transform:rotateX(360deg);}
+@keyframes  alotofmoney{
+ 0% { left:0px;}
+50% {left:-2500px;}
+100% { left:0px;}
 
 }  
 		   ul {
