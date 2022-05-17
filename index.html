@@ -181,65 +181,93 @@ h7{
 font-color:#ffffff;
 position:relevant;
 }
-.witlove{	
-	width:2700px; 
-	height:390px;
-	overflow:hidden;			
-		  }
+.cube{
+        left:300px;   
+        top:30%;
+        position: relative;
+	width:350px;
+	height:620px;
+        transform-style:preserve-3d;
+        transform: rotateY(-100deg) rotateX(70deg) rotateZ(605deg);
+       animation:money 13s infinite ;
+       -webkit-animation: money 13s infinite;/* Safari 4.0 - 8.0 */
+}
  
-		  .nftpics1{
-			  background-image:url(' https://i.pinimg.com/564x/44/6b/73/446b7365a5cf1834fe7a337976f1beef.jpg');
-	background-size::350px 50px;
-			     height:350px;
-
-			  width:350px;
-	 border-radius:50px;
-	 float: left;}
-		  
-		  .nftpics2{
-			  background-image:url('https://lh3.googleusercontent.com/_mKdALL9r0Bjb67PCHIQSxqPnEXaI74DsHvXed-Z-78GsoAn7a43msbnlA7SLpGwMVIEWlkCeGabuMt_JW9kg0r1jIGmrm1wQMdAvLZijt9SqCnBbv_NOpdLx1E2RxWumRiM11ZTWuOlqQqqQAtqDgATZ61riebnrbZcEqJbEjsxCZrut_a7xU2ZfQHVEgGoAg7yjmnSV-P8pbn7La8CTzJp--FNGoVP_G0O7ILD4DXztBjEZlZh-RNvN3-bZMrcxVZ3g2Pp1rP8GMNCb8dZi0Dekhra9isjvEEw9TGzLjX2VDi-Map6QLkqWxyVHxcNhz4EwrRYuyFgeeEttuMX3V2svaZW6-mXmNMSTVkGOhCAMe0NoXcFXU31Usvs-cYSiAzAYvYW7DaJs6MqokvKh2XM5ZSIXO6i8QeLG_Ae7kYC4hRKfpNDD6ImwTU31G-p1a5WDF84MIEqvcg_qLUXgBZ69BqRSmtE_WdA5Wv6AnT3WJTWVdPPIujOidSJS3ORkPiM_9PPMw9hCeNK2Y5m4oklX1gYQN-p8yJRkMFqnVmLYhj4NO4AZEH-f7rrZIvefQckva5iIaKBdXM2FICytrUBTjRjn6Nkt1GKgQp3XuR0CKpXKFlDpCAjGnKx9H3gjh_MG9xYKLKQdbNYVu7A-mG3p61Nz4DZCSzG3AfCX2nzjMamSfx2kz5YHct_9pF66ErHxGFKUq5Sid51b2WoMu3Z=s600-no?authuser=0');background-size:400px 600px;height:600px;width:400px;border-radius:50px;float: left;}.nftpics3{background-image:url(' https://i.pinimg.com/564x/d8/82/2f/d8822f9b7922426294ffbfe05cff6fda.jpg');
-			background-size::350px 50px;
-			     height:350px;
-
-			  width:350px;
-	 border-radius:50px;
-	 float: left;}
-		  
-		  .nftpics4{background-image:url(' https://i.pinimg.com/564x/31/f3/7e/31f37e38aa32f00a8d3ef9bb6b32781a.jpg');
-			 background-size:350px 50px;
-			     height:350px;
-
-			  width:350px;
-			  border-radius:50px;
-			  float: left;} 
-		  .nftpics5{background-image:url(' https://i.pinimg.com/564x/d2/c8/f3/d2c8f3bb82b7d57eab8eacb2eea0b07c.jpg');
-			  background-size:350px 50px;
-			     height:350px;
-
-			  width:350px;
-			  border-radius:50px;
-			  float: left;}
-		  .nftpics6{background-image:url('https://i.pinimg.com/564x/5c/f3/fa/5cf3fab9910ec34f7124a9fb971674ac.jpg' );
-			background-size:350px 50px;
-			     height:350px;
-
-			  width:350px;
-			  border-radius:50px;
-			  float: left;}	
 
 
 /* Safari 4.0 - 8.0 */
-@-webkit-keyframes alotofmoney{
- 0% { right:0px;}
-100% { right:2300px;}
+@-webkit-keyframes money{
+ 0% { transform:rotateY(0deg);}
+100% { transform:rotateY(360deg);}
 
+  
 }
 		  
-@keyframes  alotofmoney{
- 0% { right:0px;}
-100% { right:2300px;}
+@keyframes  money{
+ 0% { transform:rotateY(0deg);}
+100% { transform:rotateY(360deg);}
 
 }  
+
+.side {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-style:outset;
+       border-color:rgb(255, 255, 255);
+  background-color:rgb(255, 215, 0, .5);
+}
+
+.top {
+  transform: translateZ(-115px);
+  transform: rotateY(10deg)
+  background-color:rgb(255, 215, 0, .5);
+	border-style:outset;
+       border-color:rgb(255, 255, 255);
+}
+
+.back {
+  transform: translateZ(-115px) rotateY(180deg);
+  background-size:100% 100%;
+  background-color:rgb(255, 215, 0, .5);
+  border-style:outset;
+    border-color:rgb(255, 255, 255);
+   position:absolute;
+}
+  
+.front {
+  transform: translateZ(245px);
+  position:absolute;
+  background-image:url(" https://lh3.googleusercontent.com/ED9xjJzNol_vB06pJZY05mdN_MR5bcd5LdD7xT0S2LSqSImElR999zo_oAv8GWQXhGfWAIpIr6pINEN1HRgLfTVkGiEirx66XD5woFCy80ffZYU_QNAazBytpTUmd7FHxB8RQQ-PyIddJLLTymjUyOyALEy_jvsTAUpS0j3H-UHkzfTGuwLS-1SmcP4jAwe__878Qo3rwd7nQwWK_seCXIwKN2fSRudRJ0BIHaeSrCRRoFyLDPzUotehCyBZVgOF2kvcZUU1grMyx3nEafebv4NDu_6UDge9xjIeNgwVAMmV9kyCkcGlb_1NpyWiDvwvKkciCey6ZGOuiHf7Xzec3Qvlluhjt63YxOPiV7DTu_zU3hKkTZlaDuL-A9mPuQanqeQJFaAD3Ae9GUmwqRzfb8hoxZKxicibNDlL0sNMJsUmMH_Zfb9RKC-LpWbGPhylQAqZ72TpxcWoP_cgQzwdxHlpl2JToO9adLUoIxLGkcnOJ6hdSTuFbNkt41ffdDKXcw_0HwbrNeLmMx0QSb3U74lq7SS0byFgM9zRtxU6HGMSf69osY-ORs4xlch8iO3GxLmicBY3BnhTrwwOe4YklzNvnv_ooU8M_yeVXd82xxaA8M8zCmrKhQvCwEPlV8jEpFhMLmsf5EELA7YavvkZmz8Y6cQehk9Mg4VxJnDO4RH2OcDBQdOi8APS08txUMFn93vzP4NMS-N3lYxwRZljXfrNe0TCsLtYd0w7jXEd6yJI1KaDEJXtTkGQnvE=w418-h558-no?authuser=0 ");
+  background-size:100% 100%;
+   border-style:outset;
+       border-color:rgb(255, 255, 255);
+}
+
+
+
+
+.left {
+  width: 100%;
+  transform: translateZ(-115px) rotateY(90deg);
+  transform-origin: right;
+  background-size:100% 100%;
+  border-style:outset;
+       border-color:rgb(255, 255, 255);
+}	
+
+
+.right {
+  width: 100%;
+  transform: translateZ(-115px) rotateY(-90deg);
+  transform-origin: left;
+  background-size:100% 100%;
+  border-style:outset;
+       border-color:rgb(255, 255, 255);
+}	
+
 
 
 /* Safari 4.0 - 8.0 */
@@ -390,30 +418,12 @@ background-image:url('https://i.pinimg.com/originals/32/e3/b5/32e3b500464be68258
 	
 	
 	
-	<div class="pressurewalker">
-	
-
-	<div class="witlove">
- 
-<a href=" https://opensea.io/accounts/0xe4871265ddd6aac27cc3a6c62ec47973c5e3d2f8 /"  target="_blank">
-<div class= "nftpics1"></div>  </a>
-
-<a href="https://opensea.io/accounts/0xe4871265ddd6aac27cc3a6c62ec47973c5e3d2f8 /"  target="_blank">
-<div class= "nftpics2"> </div></a>
-
-<a href="https://opensea.io/accounts/0xe4871265ddd6aac27cc3a6c62ec47973c5e3d2f8 /"  target="_blank">
-<div class= "nftpics3"> </div></a>
-
-<a href=" https://opensea.io/accounts/0xe4871265ddd6aac27cc3a6c62ec47973c5e3d2f8/"  target="_blank">
-<div class= "nftpics4"> </div></a>
-
-<a href=" https://opensea.io/accounts/0xe4871265ddd6aac27cc3a6c62ec47973c5e3d2f8/"  target="_blank">
-<div class= "nftpics5"> </div></a>
-
-<a href=" https://opensea.io/accounts/0xe4871265ddd6aac27cc3a6c62ec47973c5e3d2f8/"  target="_blank">
-<div class= "nftpics6"> </div></a>
-	</div>	
-
+	<div class="cube">
+   <div class="side top"></div>
+   <div class="side left"><div class="leftgarage"></div></div>
+   <div class="side right"></div>
+   <div class="side front">  </div>
+      <div class="side back"></div>
 </div>
 
 
