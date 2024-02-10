@@ -121,15 +121,29 @@ Background-color:rgba(0,255,255,.7);
           }
         
 }
+		  .avatar{
+      padding-top:180px;
+   background-image:url("https://raw.githubusercontent.com/diamondrolls/images/main/52E55257-1663-463B-BBAB-2FD33441C052.png");    
+     position:absolute;
+      background-repeat:no-repeat;
+	background-size:200px 500px;
+        height:300px;
+	width:100px;
+	top:300px;
+        left:700px; 
+	       transform: translateZ(235px);
+       animation: movements2 15s infinite alternate;
+        -webkit-animation: movements2  15s infinite alternate;
 
+}
 .lilfacebook{
       padding-top:180px;
    background-image:url("https://raw.githubusercontent.com/diamondrolls/images/main/52E55257-1663-463B-BBAB-2FD33441C052.png");    
      position:absolute;
       background-repeat:no-repeat;
 	background-size:200px 500px;
-        height:500px;
-	width:200px;
+        height:300px;
+	width:100px;
 	top:300px;
         left:700px; 
 	       transform: translateZ(235px);
@@ -171,7 +185,38 @@ Background-color:rgba(0,255,255,.7);
           }
         }
 
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes movements2{
+ 0% { top:800px;
+       left:700px;
+       }
+50% { 
+        top:800px;
+         left:100px;  
+          }
 
+100% { 
+        top:800px;
+         left:700px;  
+          }
+
+}
+
+@keyframes movements2{ 
+    0% { top:800px;
+       left:700px;
+       }
+50% { 
+        top:800px;
+         left:100px;  
+          }
+
+100% { 
+        top:800px;
+         left:700px;  
+          
+          }
+        }
 .plane1{
 background-image:url("https://raw.githubusercontent.com/diamondrolls/images/main/5A3397CE-4193-4B6B-9A56-897543975D23.png");    
 position:relative;
@@ -476,6 +521,7 @@ body{
 
 	<div class='plane1'></div> </div>
 	<div class='lilfacebook'></div>
+	  <div class='avatar'></div>
 
 	
 <center> <div class="nameholder">
