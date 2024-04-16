@@ -370,18 +370,19 @@ border-radius:55px;
 border-color:rgb(255,0,0);
 top:250px;
 position:absolute;
-height:150px;
+height:400px;
 width:300px;
 background-color:rgb(0,0,0);
 }
-.nameholder2{
+
+		  .nameholder2{
 	left:300px;
 border-style:solid;
 border-radius:55px;
 border-color:rgb(255,0,0);
 top:400px;
 position:relative;
-height:250px;
+height:450px;
 width:500px;
 background-color:rgb(0,0,0);
 	 z-index:999;
@@ -564,6 +565,21 @@ body{
 </ul>
         <div class='ufo'></div><div class='ufo2'></div><div class='ufo3'></div>
 
+
+
+	
+<center> <div class="nameholder">
+	<h2 class="neon" data-text="  enter ticket number "> enter ticket number </h2>
+
+<h2 class="neon" data-text="  ticket # "> ticket # </h2> 
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form> 
+	</div></center> 
+
+
+	  
 	<div class='planeholder'>
 
 	<div class='plane1'></div> </div>
@@ -576,11 +592,11 @@ body{
 function validateForm() {
   let x = document.forms["myForm"]["fname"].value;
   if (x == "2020") {
-    window.open("example");
+    window.open("https://diamondrolls.github.io/uploadpage/");
    return true;
    }
 else {
-    alert("wrong DUC#");
+    alert("wrong ticket#");
     return false;
 
   }
