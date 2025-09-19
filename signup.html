@@ -24,7 +24,7 @@
       const password = document.getElementById('password').value
       const { data, error } = await supabase.auth.signUp({ email, password })
       if (error) alert(error.message)
-      else window.location.href = 'https://diamondrolls.github.io/thepremiumway/'
+      else window.location.href = 'https://diamondrolls.github.io/play/'
     })
   </script>
 </body>
