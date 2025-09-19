@@ -7,25 +7,39 @@
 <body>
   <h2>Sign Up</h2>
   <form id="signup-form">
-    <input type="email" id="email" placeholder="Email" required />
-    <input type="password" id="password" placeholder="Password" required />
-    <button type="submit">Sign Up</button>
-  </form>
-  <p>Already have an account? <a href="index.html">Login</a></p>
+  <input type="email" id="email" placeholder="Email" required />
+  <input type="password" id="password" placeholder="Password" required />
+  <button type="submit">Sign Up</button>
+</form>
+<p>Already have an account? <a href="index.html">Login</a></p>
 
-  <script>
-    const supabaseUrl = 'https://fjtzodjudyctqacunlqp.supabase.co'
-    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqdHpvZGp1ZHljdHFhY3VubHFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwNjA2OTQsImV4cCI6MjA3MzYzNjY5NH0.qR9RBsecfGUfKnbWgscmxloM-oEClJs_bo5YWoxFoE4' // replace with your anon key
-    const supabase = Supabase.createClient(supabaseUrl, supabaseKey)
+<!-- Load Supabase client from CDN -->
+<script src="https://unpkg.com/@supabase/supabase-js"></script>
+<script>
+  const supabaseUrl = 'https://fjtzodjudyctqacunlqp.supabase.co'
+  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqdHpvZGp1ZHljdHFhY3VubHFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwNjA2OTQsImV4cCI6MjA3MzYzNjY5NH0.qR9RBsecfGUfKnbWgscmxloM-oEClJs_bo5YWoxFoE4' // use anon key only
+  const supabase = supabasejs.createClient(supabaseUrl, supabaseKey)
 
-    document.getElementById('signup-form').addEventListener('submit', async (e) => {
-      e.preventDefault()
-      const email = document.getElementById('email').value
-      const password = document.getElementById('password').value
-      const { data, error } = await supabase.auth.signUp({ email, password })
-      if (error) alert(error.message)
-      else window.location.href = 'https://diamondrolls.github.io/play/'
+  document.getElementById('signup-form').addEventListener('submit', async (e) => {
+    e.preventDefault()
+    const email = document.getElementById('email').value
+    const password = document.getElementById('password').value
+
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        emailRedirectTo: "https://diamondrolls.github.io/play/"
+      }
     })
-  </script>
+
+    if (error) {
+      alert(error.message)
+    } else {
+      alert("Check your email for a confirmation link!")
+    }
+  })
+</script>
+
 </body>
 </html>
