@@ -563,6 +563,8 @@ body{
 <meta name= "view port"
 	content= "width=device-width,
 	initial-scale=1.0">
+	   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
+
 	    </head>
   <body>
  <a href="https://diamondrolls.github.io/thepremiumway"> <h2 class="neon" data-text=" get paid to stream "> get paid to stream </h2> </a>
@@ -578,7 +580,13 @@ body{
 </ul>
         <div class='ufo'></div><div class='ufo2'></div><div class='ufo3'></div>
 
-
+  <form id="login-form">
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <button type="submit">Login</button>
+  </form>
+  <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+	  
 
 	
 <center><a href="https://diamondrolls.github.io/thepremiumway/"> <div class="nameholder2">
@@ -596,20 +604,28 @@ body{
 
 	
 <script>
-function validateForm() {
-  let x = document.forms["myForm"]["fname"].value;
-  if (x == "2020") {
-    window.open("https://diamondrolls.github.io/uploadpage/");
-   return true;
-   }
-else {
-    alert("wrong ticket#");
-    return false;
+const supabaseUrl = 'https://fjtzodjudyctqacunlqp.supabase.co'
+    const supabaseKey = 'YOUR_SUPABASE_ANON_KEY' // replace with your anon key
+    const supabase = Supabase.createClient(supabaseUrl, supabaseKey)
 
-  }
-}
+    // Auto-redirect if already logged in
+    supabase.auth.getSession().then(({ data }) => {
+      if (data.session) {
+        window.location.href = 'https://diamondrolls.github.io/thepremiumway/'
+      }
+    })
+
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
+      e.preventDefault()
+      const email = document.getElementById('email').value
+      const password = document.getElementById('password').value
+      const { data, error } = await supabase.auth.signInWithPassword({ email, password })
+      if (error) alert(error.message)
+      else window.location.href = 'https://diamondrolls.github.io/thepremiumway/'
+    })
 </script>
 
   </body>
 
 </html>
+
