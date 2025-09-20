@@ -395,9 +395,7 @@ opacity:.6;
 
 position:absolute;
 width:285px;
-   height:135px;
-	    
-		  
+   height:135px; 
 	 z-index:999;
 		  }
 .ufo3 {
@@ -469,8 +467,8 @@ background-image:url('https://i.pinimg.com/originals/32/e3/b5/32e3b500464be68258
 z-index:9999;
 overflow:scroll;
   position:relative;
-width:275px;
-   height:235px;
+width:335px;
+   height:335px;
 background-color:rgb(0,0,0);
 	border-color:rgb(0,255,255);
 	border-style:outset;
@@ -547,14 +545,14 @@ height:99%;
 Position:relative;
 }
 
-body{   
-	background-image:url(" https://images.radio.com/aiu-media/GettyImages1195199589-6a30dfb5-3ac8-4f48-957d-b2f95225b978.jpg");
-	background-size:100% 100%;
-        background-repeat:no-repeat;
-        overflow:hidden;   
-	 width:100%;
-	 height:100%;
-           }
+body {
+      background-image:url("https://images.radio.com/aiu-media/GettyImages1195199589-6a30dfb5-3ac8-4f48-957d-b2f95225b978.jpg");
+      background-size:100% 100%;
+      background-repeat:no-repeat;
+      overflow:hidden;
+      width:100%;
+      height:100%;
+    }
 
 		</style>
 	</header>
@@ -563,27 +561,33 @@ body{
 <meta name= "view port"
 	content= "width=device-width,
 	initial-scale=1.0">
-	    </head>
-  <body>
- <a href="https://diamondrolls.github.io/thepremiumway"> <h2 class="neon" data-text=" get paid to stream "> get paid to stream </h2> </a>
-<ul> 
-<button><li> <div class='thorshammer'></div>
- 
-	
-<ul>
-<li>
-	  <div class='fax'><h2 class="neon" data-text=" 93 Crypto  "> 93 Crypto   </h2></div> </li>
-</ul>
-</li></button>
-</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <div class="fax">
+    <h2 class="neon" data-text="93 Crypto">93 Crypto</h2>
+ <br>
+	  <br>
+	  <br> <br>
+	  <br>
+	  <br> <br>
+	  <br>
+	  <br>
+	  <form id="login-form">
+      <input type="email" id="email" placeholder="Email" required /><br>
+      <input type="password" id="password" placeholder="Password" required /><br>
+	  </form>
+		  <button type="submit">Login</button>
+      <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+    
+  </div>
         <div class='ufo'></div><div class='ufo2'></div><div class='ufo3'></div>
 
-
-
-	
-<center><a href="https://diamondrolls.github.io/thepremiumway/"> <div class="nameholder2">
-<div class="instant"><h2 class="neon" data-text=" Scan Finger "> Scan Finger </h2> </div> 
-	</div></a></center> 
+  
+<center>
+<div class="instant"> </div>
+</center>
 
 
 	  
@@ -596,20 +600,31 @@ body{
 
 	
 <script>
-function validateForm() {
-  let x = document.forms["myForm"]["fname"].value;
-  if (x == "2020") {
-    window.open("https://diamondrolls.github.io/uploadpage/");
-   return true;
-   }
-else {
-    alert("wrong ticket#");
-    return false;
+    const supabaseUrl = 'https://fjtzodjudyctqacunlqp.supabase.co'
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqdHpvZGp1ZHljdHFhY3VubHFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwNjA2OTQsImV4cCI6MjA3MzYzNjY5NH0.qR9RBsecfGUfKnbWgscmxloM-oEClJs_bo5YWoxFoE4' // ⚠️ use anon key only
+    const supabase = window.Supabase.createClient(supabaseUrl, supabaseKey)
 
-  }
-}
-</script>
+    // Redirect if already logged in
+    supabase.auth.getSession().then(({ data }) => {
+      if (data.session) {
+        window.location.href = 'https://diamondrolls.github.io/thepremiumway/'
+      }
+    })
 
+    // Handle login form
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
+      e.preventDefault()
+      const email = document.getElementById('email').value
+      const password = document.getElementById('password').value
+
+      const { data, error } = await supabase.auth.signInWithPassword({ email, password })
+      if (error) {
+        alert(error.message)
+      } else {
+        window.location.href = 'https://diamondrolls.github.io/thepremiumway/'
+      }
+    })
+  </script>
   </body>
 
-</html>
+</html>	
