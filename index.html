@@ -567,45 +567,33 @@ body {
 <body>
   <div class="fax">
     <h2 class="neon" data-text="93 Crypto">93 Crypto</h2>
- <br>
-	  <br>
-	  <br> <br>
-	  <br>
-	  <br> <br>
-	  <br>
-	  <br>
-	  <form id="login-form">
+    <br><br><br><br><br><br><br><br>
+
+    <form id="login-form">
       <input type="email" id="email" placeholder="Email" required /><br>
       <input type="password" id="password" placeholder="Password" required /><br>
-	  </form>
-		  <button type="submit">Login</button>
-      <p>Don't have an account? <a href="signup.html">Sign up</a></p>
-    
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
   </div>
-        <div class='ufo'></div><div class='ufo2'></div><div class='ufo3'></div>
 
-  
-<center>
-<div class="instant"> </div>
-</center>
+  <div class='ufo'></div><div class='ufo2'></div><div class='ufo3'></div>
 
+  <center><div class="instant"></div></center>
 
-	  
-	<div class='planeholder'>
+  <div class='planeholder'><div class='plane1'></div></div>
+  <div class='lilfacebook'></div>
+  <div class='avatar'></div>
+  <div class='avatargirl'></div>
 
-	<div class='plane1'></div> </div>
-	<div class='lilfacebook'></div>
-	  <div class='avatar'></div>
-	  <div class='avatargirl'></div>
-
-	
-<script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
     const supabaseUrl = 'https://fjtzodjudyctqacunlqp.supabase.co'
-    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqdHpvZGp1ZHljdHFhY3VubHFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwNjA2OTQsImV4cCI6MjA3MzYzNjY5NH0.qR9RBsecfGUfKnbWgscmxloM-oEClJs_bo5YWoxFoE4' // ⚠️ use anon key only
-    const supabase = window.Supabase.createClient(supabaseUrl, supabaseKey)
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqdHpvZGp1ZHljdHFhY3VubHFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwNjA2OTQsImV4cCI6MjA3MzYzNjY5NH0.qR9RBsecfGUfKnbWgscmxloM-oEClJs_bo5YWoxFoE4' // ⚠️ only use anon key
+    const client = supabase.createClient(supabaseUrl, supabaseKey)
 
     // Redirect if already logged in
-    supabase.auth.getSession().then(({ data }) => {
+    client.auth.getSession().then(({ data }) => {
       if (data.session) {
         window.location.href = 'https://diamondrolls.github.io/thepremiumway/'
       }
@@ -617,7 +605,7 @@ body {
       const email = document.getElementById('email').value
       const password = document.getElementById('password').value
 
-      const { data, error } = await supabase.auth.signInWithPassword({ email, password })
+      const { data, error } = await client.auth.signInWithPassword({ email, password })
       if (error) {
         alert(error.message)
       } else {
@@ -625,6 +613,6 @@ body {
       }
     })
   </script>
-  </body>
+</body>
 
 </html>	
