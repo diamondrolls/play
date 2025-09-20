@@ -16,15 +16,15 @@
 
   <script>
     const supabaseUrl = 'https://fjtzodjudyctqacunlqp.supabase.co'
-    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqdHpvZGp1ZHljdHFhY3VubHFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwNjA2OTQsImV4cCI6MjA3MzYzNjY5NH0.qR9RBsecfGUfKnbWgscmxloM-oEClJs_bo5YWoxFoE4' // ⚠️ use only anon key
-    const supabase = window.Supabase.createClient(supabaseUrl, supabaseKey)
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqdHpvZGp1ZHljdHFhY3VubHFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwNjA2OTQsImV4cCI6MjA3MzYzNjY5NH0.qR9RBsecfGUfKnbWgscmxloM-oEClJs_bo5YWoxFoE4' // ⚠️ only use anon key
+    const client = supabase.createClient(supabaseUrl, supabaseKey)
 
     document.getElementById('signup-form').addEventListener('submit', async (e) => {
       e.preventDefault()
       const email = document.getElementById('email').value
       const password = document.getElementById('password').value
 
-      const { data, error } = await supabase.auth.signUp({
+      const { data, error } = await client.auth.signUp({
         email,
         password,
         options: {
@@ -39,14 +39,5 @@
       }
     })
   </script>
-</body>
-</html>
-      alert(error.message)
-    } else {
-      alert("Check your email for a confirmation link!")
-    }
-  })
-</script>
-
 </body>
 </html>
