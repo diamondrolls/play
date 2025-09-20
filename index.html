@@ -605,21 +605,27 @@ body {
   });
 
   // Handle login form
-  document.getElementById('login-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+  const form = document.getElementById("login-form");
 
-    try {
-      const { data, error } = await client.auth.signInWithPassword({ email, password });
-      if (error) throw error;
-      console.log("✅ Login successful", data); // Debug log
-      window.location.href = 'https://diamondrolls.github.io/thepremiumway/';
-    } catch (err) {
-      console.error(err);
-      alert(err.message);
-    }
+form.addEventListener("submit", async (e) => {
+  e.preventDefault(); // stop page reload
+
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email,
+    password,
   });
+
+  if (error) {
+    alert("Login failed: " + error.message);
+  } else {
+    // login succeeded
+    window.location.href = "/dashboard.html"; // change to your page
+  }
+});
+
 
     // Lazy loading for decorative elements
     const lazyElements = document.querySelectorAll('.lazy-element');
