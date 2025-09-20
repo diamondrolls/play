@@ -33,7 +33,7 @@
 }
 .border6{
  overflow:scroll;
-	width:580px; 
+	width:580px;
 	height:680px;
         z-index:-5;
         background-color:rgba(0,255,100,.6);
@@ -42,7 +42,16 @@
 	padding-top:50px;
 }      
 
-	
+form { margin: 30px auto; 
+	  display: inline-block; }
+    
+input { margin: 5px 0; 
+	   padding: 10px; 
+	   width: 200px; }
+   
+button { padding: 10px 20px; 
+		margin-top: 10px; 
+		cursor: pointer; }	
 
 ul {
        margin:0px;
@@ -554,78 +563,76 @@ body {
       height:100%;
     }
 
-		</style>
-	</header>
- <head>
-    
-<meta name= "view port"
-	content= "width=device-width,
-	initial-scale=1.0">
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+	/* Placeholder styles for lazy-loaded elements */
+    .lazy-element { opacity: 0; transition: opacity 0.8s ease-in; }
+    .lazy-element.visible { opacity: 1; }
+  </style>
 </head>
 <body>
-  <div class="fax">
+
+
     <h2 class="neon" data-text="93 Crypto">93 Crypto</h2>
- <br>
-	  <br>
-	  <br> <br>
-	  <br>
-	  <br> <br>
-	  <br>
-	  <br>
-	  <form id="login-form">
+
+    <form id="login-form">
       <input type="email" id="email" placeholder="Email" required /><br>
       <input type="password" id="password" placeholder="Password" required /><br>
-	  </form>
-		  <button type="submit">Login</button>
-      <p>Don't have an account? <a href="signup.html">Sign up</a></p>
-    
-  </div>
-        <div class='ufo'></div><div class='ufo2'></div><div class='ufo3'></div>
+      <button type="submit">Login</button>
+    </form>
 
+    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
   
-<center>
-<div class="instant"> </div>
-</center>
 
+  <!-- Lazy-loaded decorative elements -->
+  <div class='ufo lazy-element'></div>
+  <div class='ufo2 lazy-element'></div>
+  <div class='ufo3 lazy-element'></div>
+  <center><div class="instant lazy-element"></div></center>
+  <div class='planeholder lazy-element'><div class='plane1'></div></div>
+  <div class='lilfacebook lazy-element'></div>
+  <div class='avatar lazy-element'></div>
+  <div class='avatargirl lazy-element'></div>
 
-	  
-	<div class='planeholder'>
+  <script>
+  const supabaseUrl = 'https://fjtzodjudyctqacunlqp.supabase.co';
+  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqdHpvZGp1ZHljdHFhY3VubHFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwNjA2OTQsImV4cCI6MjA3MzYzNjY5NH0.qR9RBsecfGUfKnbWgscmxloM-oEClJs_bo5YWoxFoE4'; // use anon key only
+  const client = supabase.createClient(supabaseUrl, supabaseKey);
 
-	<div class='plane1'></div> </div>
-	<div class='lilfacebook'></div>
-	  <div class='avatar'></div>
-	  <div class='avatargirl'></div>
+  // Redirect if already logged in
+  client.auth.getSession().then(({ data }) => {
+    if (data.session) {
+      window.location.href = 'https://diamondrolls.github.io/thepremiumway/';
+    }
+  });
 
-	
-<script>
-    const supabaseUrl = 'https://fjtzodjudyctqacunlqp.supabase.co'
-    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqdHpvZGp1ZHljdHFhY3VubHFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwNjA2OTQsImV4cCI6MjA3MzYzNjY5NH0.qR9RBsecfGUfKnbWgscmxloM-oEClJs_bo5YWoxFoE4' // ⚠️ use anon key only
-    const supabase = window.Supabase.createClient(supabaseUrl, supabaseKey)
+  // Handle login form
+  document.getElementById('login-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
-    // Redirect if already logged in
-    supabase.auth.getSession().then(({ data }) => {
-      if (data.session) {
-        window.location.href = 'https://diamondrolls.github.io/thepremiumway/'
-      }
-    })
+    try {
+      const { data, error } = await client.auth.signInWithPassword({ email, password });
+      if (error) throw error;
+      console.log("✅ Login successful", data); // Debug log
+      window.location.href = 'https://diamondrolls.github.io/thepremiumway/';
+    } catch (err) {
+      console.error(err);
+      alert(err.message);
+    }
+  });
 
-    // Handle login form
-    document.getElementById('login-form').addEventListener('submit', async (e) => {
-      e.preventDefault()
-      const email = document.getElementById('email').value
-      const password = document.getElementById('password').value
+    // Lazy loading for decorative elements
+    const lazyElements = document.querySelectorAll('.lazy-element');
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
 
-      const { data, error } = await supabase.auth.signInWithPassword({ email, password })
-      if (error) {
-        alert(error.message)
-      } else {
-        window.location.href = 'https://diamondrolls.github.io/thepremiumway/'
-      }
-    })
+    lazyElements.forEach(el => observer.observe(el));
   </script>
-  </body>
-
-</html>
-
+</body>
+</html> 
