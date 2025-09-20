@@ -593,33 +593,33 @@ body {
   <div class='avatargirl lazy-element'></div>
 
   <script>
-    // Initialize Supabase correctly
-    const supabaseUrl = 'https://fjtzodjudyctqacunlqp.supabase.co';
-    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqdHpvZGp1ZHljdHFhY3VubHFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwNjA2OTQsImV4cCI6MjA3MzYzNjY5NH0.qR9RBsecfGUfKnbWgscmxloM-oEClJs_bo5YWoxFoE4'; 
-    const client = supabase.createClient(supabaseUrl, supabaseKey);
+  const supabaseUrl = 'https://fjtzodjudyctqacunlqp.supabase.co';
+  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqdHpvZGp1ZHljdHFhY3VubHFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwNjA2OTQsImV4cCI6MjA3MzYzNjY5NH0.qR9RBsecfGUfKnbWgscmxloM-oEClJs_bo5YWoxFoE4'; // use anon key only
+  const client = supabase.createClient(supabaseUrl, supabaseKey);
 
-    // Redirect if already logged in
-    client.auth.getSession().then(({ data }) => {
-      if (data.session) {
-        window.location.href = 'https://diamondrolls.github.io/thepremiumway/';
-      }
-    });
+  // Redirect if already logged in
+  client.auth.getSession().then(({ data }) => {
+    if (data.session) {
+      window.location.href = 'https://diamondrolls.github.io/thepremiumway/';
+    }
+  });
 
-    // Login form handler
-    document.getElementById('login-form').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
+  // Handle login form
+  document.getElementById('login-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
-      try {
-        const { data, error } = await client.auth.signInWithPassword({ email, password });
-        if (error) throw error;
-        console.log("Login successful!", data); // debug
-        window.location.href = 'https://diamondrolls.github.io/thepremiumway/';
-      } catch (err) {
-        alert(err.message);
-      }
-    });
+    try {
+      const { data, error } = await client.auth.signInWithPassword({ email, password });
+      if (error) throw error;
+      console.log("✅ Login successful", data); // Debug log
+      window.location.href = 'https://diamondrolls.github.io/thepremiumway/';
+    } catch (err) {
+      console.error(err);
+      alert(err.message);
+    }
+  });
 
     // Lazy loading for decorative elements
     const lazyElements = document.querySelectorAll('.lazy-element');
