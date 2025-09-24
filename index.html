@@ -602,34 +602,27 @@ body {
   const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqdHpvZGp1ZHljdHFhY3VubHFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwNjA2OTQsImV4cCI6MjA3MzYzNjY5NH0.qR9RBsecfGUfKnbWgscmxloM-oEClJs_bo5YWoxFoE4'; // use anon key only
   const client = supabase.createClient(supabaseUrl, supabaseKey);
 
-  // Redirect if already logged in
-  client.auth.getSession().then(({ data }) => {
+ // Redirect if already logged in
+  supabase.auth.getSession().then(({ data }) => {
     if (data.session) {
-window.location.href = 'https://diamondrolls.github.io/thepremiumway/';
+      window.location.href = 'https://diamondrolls.github.io/thepremiumway/';
     }
   });
 
-  // Handle login form
+  // Handle email/password login
   const form = document.getElementById("login-form");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault(); // stop page reload
-
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-
-  const { data, error } = await supabase.auth.signInWithPassword({
-    email,
-    password,
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+    if (error) {
+      alert("Login failed: " + error.message);
+    } else {
+      window.location.href = "https://diamondrolls.github.io/thepremiumway/";
+    }
   });
-
-  if (error) {
-    alert("Login failed: " + error.message);
-  } else {
-    // login succeeded
-window.location.href = 'https://diamondrolls.github.io/thepremiumway/';
-  }
-});
   </script>
 </body>
 </html>
