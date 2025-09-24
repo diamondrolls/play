@@ -605,7 +605,7 @@ body {
   // Redirect if already logged in
   client.auth.getSession().then(({ data }) => {
     if (data.session) {
-     redirectTo: window.location.href = 'https://diamondrolls.github.io/thepremiumway/';
+window.location.href = 'https://diamondrolls.github.io/thepremiumway/';
     }
   });
 
@@ -627,7 +627,7 @@ form.addEventListener("submit", async (e) => {
     alert("Login failed: " + error.message);
   } else {
     // login succeeded
-    redirectTo: window.location.href = "https://diamondrolls.github.io/thepremiumway/";
+window.location.href = 'https://diamondrolls.github.io/thepremiumway/';
   }
 });
   </script>
