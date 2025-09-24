@@ -629,7 +629,15 @@ form.addEventListener("submit", async (e) => {
     redirectTo: window.location.href = "https://diamondrolls.github.io/thepremiumway/";
   }
 });
-	  
+	  document.getElementById("login-btn").addEventListener("click", async () => {
+      const { data, error } = await supabase.auth.signInWithOAuth({
+        provider: "github",
+        options: {
+          redirectTo: window.location.href= "https://diamondrolls.github.io/thepremiumway/";
+        }
+      });
+      if (error) console.error("Login error:", error);
+    });
   </script>
 </body>
 </html>
