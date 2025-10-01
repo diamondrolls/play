@@ -597,13 +597,15 @@ body {
   <div class='avatar'></div>
   <div class='avatargirl'></div>
 
-  <script>
+<script>
+  // Setup Supabase client
+  const { createClient } = supabase;
   const supabaseUrl = 'https://fjtzodjudyctqacunlqp.supabase.co';
-  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqdHpvZGp1ZHljdHFhY3VubHFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwNjA2OTQsImV4cCI6MjA3MzYzNjY5NH0.qR9RBsecfGUfKnbWgscmxloM-oEClJs_bo5YWoxFoE4'; // use anon key only
-  const client = supabase.createClient(supabaseUrl, supabaseKey);
+  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqdHpvZGp1ZHljdHFhY3VubHFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwNjA2OTQsImV4cCI6MjA3MzYzNjY5NH0.qR9RBsecfGUfKnbWgscmxloM-oEClJs_bo5YWoxFoE4'; 
+  const client = createClient(supabaseUrl, supabaseKey);
 
- // Redirect if already logged in
-  supabase.auth.getSession().then(({ data }) => {
+  // Redirect if already logged in
+  client.auth.getSession().then(({ data }) => {
     if (data.session) {
       window.location.href = 'https://diamondrolls.github.io/thepremiumway/';
     }
@@ -616,13 +618,18 @@ body {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+    const { data, error } = await client.auth.signInWithPassword({
+      email, 
+      password
+    });
+
     if (error) {
       alert("Login failed: " + error.message);
     } else {
       window.location.href = "https://diamondrolls.github.io/thepremiumway/";
     }
   });
-  </script>
+</script>
+
 </body>
 </html>
